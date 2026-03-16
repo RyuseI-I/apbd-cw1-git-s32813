@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Program started");
 Console.WriteLine("Enter number:");
 if (int.TryParse(Console.ReadLine(), out int result)) {
     Console.WriteLine($"You inserted: {result}");
