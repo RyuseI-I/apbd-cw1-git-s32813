@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Program started");
+﻿Console.WriteLine("Hello from branch");
 Console.WriteLine("Enter number:");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number, out int result)) {
