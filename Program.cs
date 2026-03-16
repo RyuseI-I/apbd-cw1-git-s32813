@@ -1,3 +1,7 @@
 ﻿Console.WriteLine("Hello, World!");
 Console.WriteLine("Enter number:");
-int num = int.Parse(Console.ReadLine());
+if (int.TryParse(Console.ReadLine(), out int result)) {
+    Console.WriteLine($"You inserted: {result}");
+} else {
+    Console.WriteLine("Error! It's not a number!");
+}
