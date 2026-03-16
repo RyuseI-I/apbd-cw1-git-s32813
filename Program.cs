@@ -5,3 +5,8 @@ if (int.TryParse(Console.ReadLine(), out int result)) {
 } else {
     Console.WriteLine("Error! It's not a number!");
 }
+
+public static double CalculateAverage(int[] values)
+{
+    return values.Average();
+}

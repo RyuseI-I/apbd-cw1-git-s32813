@@ -1,0 +1,37 @@
+[33mcommit 03f0f87bd4d75b0dc1ee85804f01d1cfd2f687c5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Tymofii <s32813@pjwstk.edu.pl>
+Date:   Mon Mar 16 22:30:20 2026 +0100
+
+    Add extension methods in StatisticsHelper
+
+[1mdiff --git a/Program.cs b/Program.cs[m
+[1mindex bdf9ce2..b70f1af 100644[m
+[1m--- a/Program.cs[m
+[1m+++ b/Program.cs[m
+[36m@@ -1,7 +1,7 @@[m
+[31m-﻿Console.WriteLine("Hello, World!");[m
+[32m+[m[32m﻿Console.WriteLine("Program started");[m
+ Console.WriteLine("Enter number:");[m
+ if (int.TryParse(Console.ReadLine(), out int result)) {[m
+     Console.WriteLine($"You inserted: {result}");[m
+ } else {[m
+     Console.WriteLine("Error! It's not a number!");[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+[1mdiff --git a/StatisticsHelper.cs b/StatisticsHelper.cs[m
+[1mindex f3b6baf..42c9a79 100644[m
+[1m--- a/StatisticsHelper.cs[m
+[1m+++ b/StatisticsHelper.cs[m
+[36m@@ -1,7 +1,6 @@[m
+ public static class StatisticsHelper[m
+ {[m
+[31m-    public static int Sum(int[] values)[m
+[31m-    {[m
+[31m-        return values.Sum();[m
+[31m-    }[m
+[32m+[m[32m    public static int Sum(this int[] values) => values.Sum();[m
+[32m+[m[41m    [m
+[32m+[m[32m    public static double Average(this int[] values) => values.Any() ? values.Average() : 0;[m
+ }[m
+\ No newline at end of file[m
